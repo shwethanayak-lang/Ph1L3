@@ -12,54 +12,11 @@
 </head>
 
 <body>
-  <script>
-   
-    var addUser = () => {
-     //Email Id verification
-      var x = document.myform.email.value;
-      var atposition = x.indexOf("@");
-      var dotposition = x.lastIndexOf(".");
-      if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
-        document.getElementById("errors").innerHTML = "Please enter a valid e-mail address"; // Indicate the error message
-      }
-      else{
-        // Display the entries
-      var username = document.getElementById("name").value;
-      var emailid = document.getElementById("email").value;
-      document.getElementById("Name").innerHTML = username;
-      document.getElementById("Email").innerHTML = emailid;
-      }
-      //  console.log("UserName:" + username + "   "  +  "EmailId:" +  emailid);
-    }
+ 
 
-    var deleteEntry = (Name, email) => {
-      document.getElementById("Name").innerHTML = "";
-      document.getElementById("Email").innerHTML = "";
-        document.getElementById("name").value = "";
-      document.getElementById("email").value = "";
-    }
-
-  </script>
-  <div class="container">
-
-    <h2>Add a User:</h2>
-
-    <form name="myform" id="add-user" method="POST">
-      <input type="text" id="name" name="username" placeholder="name" />
-      <input type="email" id="email" name="email" placeholder="email" />
-      <span id="errors"> </span>    
-      <button type="button" id="btn" onclick="addUser()">add user</button>
-      <hr>
-      <section>
-        <h2>
-        Users:
-      </h2>
-    <p> UserName: </p><p id="Name"></p>
-    <p> Email Id:</p> <p id="Email"></p>
-      <button type="button" id="btn2" onclick="deleteEntry()">Remove</button>
-      </section>
-    </form>
-  </div>
-
-</html>
+<script src="Ph1L3.js" ></script>
+  
+  
+  
 </body>
+</html>
