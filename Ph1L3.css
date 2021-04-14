@@ -1,43 +1,132 @@
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 97%;
-  margin: 0 15px;
-  margin-top: 45px;
-}
-
-th,
-td,
-tr {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 10px;
-  font-size: 15px;
-}
-
-h2 {
-  text-align: center;
-  padding-top: 25px;
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap");
+body {
+  font-family: "Carrois Gothic", sans-serif;
   font-weight: bold;
+  background: #f0f1f5;
 }
-tr:nth-child(even) {
-  background-color: #dddddd;
+h2 {
+  color: #660aa1;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
-button {
-  margin: 20px;
-  padding: 5px;
+#Name,
+#Email,
+#btn2 {
+  margin-left: 100px;
+}
+#btn {
+  background-color: #ffa500;
+  color: #660aa1;
   border-radius: 7%;
-  overflow: hidden;
   cursor: pointer;
-  border: none;
-  font-size: 16px;
 }
 
-#add {
-  background-color: #03b897;
+#btn:hover {
+  background-color: #77ab59;
+  color: #ec3b83;
 }
 
-#remove {
-  float: right;
-  background-color: #b3b803;
+.container {
+  border: 1px solid #000;
+  width: 40%;
+  height: auto;
+  background-color: #0080ff;
+  /* margin-left: 160px; */
+  transform: translate(65%, 15%);
+  margin-top: 20px;
+  padding: 20px;
+}
+#errors {
+  color: red;
+}
+
+input {
+  justify-content: space-around;
+  padding: 2px 40px;
+  margin-right: 35px;
+  margin-bottom: 25px;
+  margin-left: 100px;
+}
+#btn2 {
+  background-color: #b2ff66;
+  color: #808080;
+  border-radius: 10%;
+  cursor: pointer;
+  margin-left: 180px;
+  padding: 5px 35px;
+}
+
+#btn2:hover {
+  background-color: #1ae8d8;
+  color: #ec3b83;
+}
+
+#btn {
+  padding: 5px 35px;
+  margin-left: 175px;
+}
+span {
+  display: block;
+}
+hr {
+  width: auto;
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  input {
+    padding: 5px 5px;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  #btn {
+    background-color: #ffa500;
+    color: #390bb8;
+    border-radius: 10%;
+    cursor: pointer;
+    margin-left: 2px;
+    padding: 5px 5px;
+  }
+  input {
+    padding: 5px 5px;
+    margin-left: 2px;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1024px) {
+  #btn,
+  #btn2 {
+    justify-items: center;
+  }
+  h2 {
+    float: center;
+  }
+  .container {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media (min-width: 320px) {
+  #btn2 {
+    margin-left: 20px;
+  }
+
+  .container {
+    height: auto;
+  }
+  input {
+    margin-left: 10px;
+  }
+  #btn {
+    margin-left: 20px;
+  }
 }
