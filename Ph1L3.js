@@ -10,6 +10,7 @@
       }
       else{
         // Display the entries
+         document.getElementById("errors").innerHTML=" ";
       var username = document.getElementById("name").value;
       var emailid = document.getElementById("email").value;
       document.getElementById("Name").innerHTML = username;
