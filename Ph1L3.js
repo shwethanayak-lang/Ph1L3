@@ -2,10 +2,11 @@
    
     var addUser = () => {
      //Email Id verification
-      var x = document.myform.email.value;
-      var atposition = x.indexOf("@");
-      var dotposition = x.lastIndexOf(".");
-      if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+     let regEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/;
+
+  var x = document.myform.email.value;
+
+  if (!regEmail.test(x)) {
         document.getElementById("errors").innerHTML = "Please enter a valid e-mail address"; // Indicate the error message
       }
       else{
